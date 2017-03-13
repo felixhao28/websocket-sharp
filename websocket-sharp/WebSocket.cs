@@ -297,20 +297,25 @@ namespace WebSocketSharp
       }
     }
 
-    #endregion
+        #endregion
 
-    #region Public Properties
+        #region Public Properties
 
-    /// <summary>
-    /// Gets or sets the compression method used to compress a message on
-    /// the WebSocket connection.
-    /// </summary>
-    /// <value>
-    /// One of the <see cref="CompressionMethod"/> enum values that specifies
-    /// the compression method used to compress a message. The default value is
-    /// <see cref="CompressionMethod.None"/>.
-    /// </value>
-    public CompressionMethod Compression {
+        /// <summary>
+        /// Gets or sets the custom headers
+        /// </summary>
+        public IEnumerable<KeyValuePair<string, string>> CustomHeaders { get; set; }
+
+        /// <summary>
+        /// Gets or sets the compression method used to compress a message on
+        /// the WebSocket connection.
+        /// </summary>
+        /// <value>
+        /// One of the <see cref="CompressionMethod"/> enum values that specifies
+        /// the compression method used to compress a message. The default value is
+        /// <see cref="CompressionMethod.None"/>.
+        /// </value>
+        public CompressionMethod Compression {
       get {
         return _compression;
       }
@@ -1782,6 +1787,13 @@ namespace WebSocketSharp
     private HttpResponse sendHandshakeRequest ()
     {
       var req = createHandshakeRequest ();
+      if (CustomHeaders != null)
+      {
+        foreach (var header in CustomHeaders)
+        {
+          req.Headers.Add(header.Key, header.Value);
+        }
+      }
       var res = sendHttpRequest (req, 90000);
       if (res.IsUnauthorized) {
         var chal = res.Headers["WWW-Authenticate"];

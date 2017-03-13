@@ -2,6 +2,8 @@
 
 ## Welcome to websocket-sharp! ##
 
+This is a fork of [original websocket-sharp project](https://github.com/sta/websocket-sharp) with additional support for custom headers! See [here](https://github.com/sta/websocket-sharp/pull/22) for more info.
+
 websocket-sharp supports:
 
 - [RFC 6455](#supported-websocket-specifications)

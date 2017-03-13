@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>WebSocketSharp.CustomHeaders</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>felixhao28</authors>
+    <owners>felixhao28</owners>
+    <projectUrl>https://github.com/felixhao28/websocket-sharp</projectUrl>
+    <iconUrl>https://raw.github.com/felixhao28/websocket-sharp/master/websocket-sharp_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>See https://www.nuget.org/packages/WebSocketSharp for more info.</description>
+    <releaseNotes>WebSocketSharp fork with custom headers support.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>WebSocket</tags>
+  </metadata>
+</package>

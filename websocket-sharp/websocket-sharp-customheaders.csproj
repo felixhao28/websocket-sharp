@@ -8,7 +8,7 @@
     <ProjectGuid>{B357BAC7-529E-4D81-A0D2-71041B19C8DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>WebSocketSharp</RootNamespace>
-    <AssemblyName>websocket-sharp</AssemblyName>
+    <AssemblyName>websocket-sharp-customheaders</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>websocket-sharp.snk</AssemblyOriginatorKeyFile>

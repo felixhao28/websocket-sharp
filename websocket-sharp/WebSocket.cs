@@ -1791,7 +1791,14 @@ namespace WebSocketSharp
       {
         foreach (var header in CustomHeaders)
         {
-          req.Headers.Add(header.Key, header.Value);
+          if (header.Key == "Sec-WebSocket-Key")
+          {
+            _logger.Error("Sec-WebSocket-Key is automatically generated and your override will not work.");
+          }
+          else
+          {
+            req.Headers.Set(header.Key, header.Value);
+          }
         }
       }
       var res = sendHttpRequest (req, 90000);
@@ -1815,7 +1822,7 @@ namespace WebSocketSharp
             releaseClientResources ();
             setClientStream ();
           }
-
+          
           var authRes = new AuthenticationResponse (_authChallenge, _credentials, _nonceCount);
           _nonceCount = authRes.NonceCount;
           req.Headers["Authorization"] = authRes.ToString ();

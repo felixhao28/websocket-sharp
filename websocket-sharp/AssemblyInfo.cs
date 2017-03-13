@@ -4,11 +4,11 @@ using System.Runtime.CompilerServices;
 // Information about this assembly is defined by the following attributes. 
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle("websocket-sharp")]
-[assembly: AssemblyDescription("A C# implementation of the WebSocket protocol client and server")]
+[assembly: AssemblyTitle("websocket-sharp-customheaders")]
+[assembly: AssemblyDescription("A C# implementation of the WebSocket protocol client and server with custom headers")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("websocket-sharp.dll")]
+[assembly: AssemblyProduct("websocket-sharp-customheaders.dll")]
 [assembly: AssemblyCopyright("sta.blockhead")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

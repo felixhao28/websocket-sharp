@@ -1,5 +1,11 @@
 ![Logo](websocket-sharp_logo.png)
 
+Update on March 4th, 2021:
+
+While you are looking at this, also take a look at [ClientWebSocketOptions.SetRequestHeader(String, String) Method](https://docs.microsoft.com/en-us/dotnet/api/system.net.websockets.clientwebsocketoptions.setrequestheader?view=netcore-3.1#System_Net_WebSockets_ClientWebSocketOptions_SetRequestHeader_System_String_System_String_) and [deniszykov's WebSocketListener](https://github.com/deniszykov/WebSocketListener). I started this repo as a fork of a PR, and I simply lack the expertise to maintain it further. The [original websocket-sharp project](https://github.com/sta/websocket-sharp) has received tons of updates since then, so this is not a very up-to-date version of it.
+
+Anyways, enjoy the freedom of customizing headers!
+
 ## Welcome to websocket-sharp! ##
 
 This is a fork of [original websocket-sharp project](https://github.com/sta/websocket-sharp) with additional support for custom headers! See [here](https://github.com/sta/websocket-sharp/pull/22) for more info.
